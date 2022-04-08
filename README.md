@@ -3,7 +3,9 @@
 Compilado de todas as anotações que fiz durante o estudo para tirar a certificação **[AWS Certified Cloud Practitioner](https://aws.amazon.com/pt/certification/certified-cloud-practitioner).** 
 
 * [Tópicos da certificação](#Tópicos)
+    - [Sobre a prova](#about)
     - [Conceitos de Cloud](#cloud_computing)
+    - [Serviços da AWS](#services)
     - [Instâncias EC2](#ec2)
     - [Storage S3](#s3)
     - [IAM](#iam)
@@ -41,16 +43,64 @@ Domain 4: Billing and Pricing
 4.2 Recognize the various account structures in relation to AWS billing and pricing  
 4.3 Identify resources available for billing support  
 
+
+<hr> 
+<div id="about"></div> 
+
+#### Sobre a prova
+- A Prova vale de 0 a 1000 pontos, para ganhar o certificado, você deve tirar a cima de 700 pontos
+- Os pesos estão listados a cima
+- São questões de multipla escolha e escolha múltipla
+- A prova é assistida por um instrutor da AWS
 <hr> 
 <div id="cloud_computing"></div> 
 
 ## Conceitos de Cloud
+Cloud computing (Computação em nuvem), empresas de grande poder de compra que alugam seus data centers para terceiros, onde provem serviços já configurados para o consumidor final, como backup, processamento sob demanda, etc. Então o usuário que precise de serviços de computação, não precisa mais comprar seu servidor e manter localmente, nem tenha que fazer upgrade físico toda vez que precise aumentar recursos, tudo se torna mais fácil
+
+### Vantagens
+- Capital expense Vs variable expenses
+  - Capital expense é quando você sabe quanto vai gastar, você contrata X recursos, e pelo período contratado, você tem certeza do custo total
+  - Variable expenses é quando não sabe quanto vai gastar, você acaba comprando seu hardware, e nunca sabe quanto vai gastar no final, pois sempre pode ter algum upgrade ou manutenção imprevista
+- Economia, como temos muitas pessoas migrando para nuvem, mais barato fica para a AWS, pois ela consegue comprar mais material/hardware em lote a preço menor, logo fica mais barato
+- Escalabilidade e capacidade dinâmica, alterar recursos com base na demanda e crescimento do seu negócio
+- Velocidade e agilidade, com facilidade podemos criar um servidor em alguns cliques, fazer upgrade e etc
+- Zero manutenção de datacenter, isso fica sob responsabilidade do seu cloud provider
+- Rapidez para criar seus recursos e serviços. Implantação global em questão de minutos. Com a nuvem, você pode ampliar as atividades para novas regiões geográficas e implantar globalmente em minutos. Por exemplo, a AWS tem infraestrutura em todo o mundo, o que permite que você implante aplicativos em vários locais físicos com apenas alguns cliques. Aproximar os aplicativos dos usuários finais reduz a latência e melhora a experiência desses usuários
+
+### Tipos de clouds
+Temos 3 tipos de clouds, veremos a seguir. ***A AWS se encaixa nos 3***
+#### IAAS
+Infrastructure as a service (infraestrutura como serviço). Quando utilizamos a infraestrutura da empresa, como por exemplo o serviço AWS EC2 que utilizamos os hardwares da AWS para montar nossos servidores. Geralmente oferece acesso a recursos de rede, computadores (virtuais ou em hardware dedicado) e espaço de armazenamento de dados
+#### PAAS
+plataform as a service (plataforma como serviço), quando você tem um serviço totalmente gerenciado, ex: quer ter um site e contrata um wordpress gerenciado, você não sabe o que tem por baixo da infra e como está implementado, você só usa. Não precisa mais gerenciar a infraestrutura subjacente (geralmente, hardware e sistemas operacionais) e pode manter o foco na implantação e no gerenciamento de aplicativos.
+#### SAAS
+SaaS – software as a service (software como serviço). Quando você só utiliza o software, ex o gmail.
+
+
+<hr> 
+<div id="services"></div> 
+
+## Serviços da AWS
+Atualmente a AWS provem mais de 200 serviços. Temos regions e ***availability zones***, uma região sempre é um pais e uma availability zones é um local onde temos os datacenters dentro do pais, como por exemplo, region Brasil e availability zones São Paulo 
 
 <hr> 
 <div id="ec2"></div> 
 
-## Instâncias EC2
+## Instâncias EC2 (Amazon Elastic Compute Cloud)
+Máquinas virtuais na AWS, temos várias capacidades de hardware/memória disponíveis em diversas regions e zonas
 
+#### Definição de preço
+- 750h gratuitas por mês gratuitas por mês durante os primeiros 12 meses
+- Sob demanda
+  - Com as instâncias sob demanda, você paga pela capacidade computacional por hora ou por segundo, dependendo das instâncias executadas. Não são necessários compromissos de longo prazo nem pagamentos antecipados. Você pode aumentar ou diminuir a capacidade computacional dependendo das demandas do aplicativo e pagar apenas as taxas por hora especificadas para a instância utilizada
+- Instâncias spot
+  - As instâncias spot do Amazon EC2 permitem solicitar capacidade computacional extra do Amazon EC2 com desconto de até 90% em relação ao preço das instâncias sob demanda. São recursos ociosos da AWS, que ela "aluga" com esse preço baixíssimo mas caso preciso de volta, ela desliga sua máquina e cobra somente pelo tempo que você utilizou
+- Savings Plans
+  - Planos de 1 a 3 anos, que tem um preço muito menor comparado ao sob demanda
+- Host dedicados
+  - Servidor físico do EC2 dedicado exclusivamente ao seu uso
+  - Os hosts dedicados ajudam você a reduzir custos, permitindo que você use licenças existentes de software vinculadas ao servidor, incluindo Windows Server, SQL Server
 <hr> 
 <div id="s3"></div> 
 

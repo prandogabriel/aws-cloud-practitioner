@@ -47,7 +47,7 @@ Domain 4: Billing and Pricing
 <hr> 
 <div id="about"></div> 
 
-#### Sobre a prova
+## Sobre a prova
 - A Prova vale de 0 a 1000 pontos, para ganhar o certificado, você deve tirar a cima de 700 pontos
 - Os pesos estão listados a cima
 - São questões de multipla escolha e escolha múltipla
@@ -101,6 +101,25 @@ Máquinas virtuais na AWS, temos várias capacidades de hardware/memória dispon
 - Host dedicados
   - Servidor físico do EC2 dedicado exclusivamente ao seu uso
   - Os hosts dedicados ajudam você a reduzir custos, permitindo que você use licenças existentes de software vinculadas ao servidor, incluindo Windows Server, SQL Server
+
+  #### Categorias de instâncias
+  Temos 4 categorias de instâncias EC2
+  - Uso geral
+  - Computacional otimizada (mais memória ou processamento)
+  - Storage (Armazenamento) otimizada
+  - Computação acelerada
+
+Depende para seu caso de uso. Dentro de cada categoria temos várias subdcategorias, com especificações diferentes de memória, conectividade com rede, processamento, etc.
+
+#### EBS Elastic block store
+A AWS não usa discos diretamente nos seus servidores, para armazenamento ela utiliza o recurso chamado EBS, onde temos SSDs e HDDs.
+Dentro dessas duas divisões temos mais algumas subdivisões. que podem variar em:
+- Durabilidade
+- **IOPS** (Input output per second) Entrada e saida por segundo 
+
+Para armazenar dados é recomendado HDD, para rodar sistema operacional recomendado SSD
+
+
 <hr> 
 <div id="s3"></div> 
 

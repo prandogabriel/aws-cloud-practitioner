@@ -119,7 +119,35 @@ Dentro dessas duas divisões temos mais algumas subdivisões. que podem variar e
 
 Para armazenar dados é recomendado HDD, para rodar sistema operacional recomendado SSD
 
+### Load Balancer (Servico -> Elastic Load Balancer)
+Responsável por fazer o balanceamento de carga entre serviços replicados, assim aumentando a capacidade de carga em uma aplicação
 
+Existem 3 tipos de load balancer:
+
+#### Application
+- Inteligente, visualiza dados na camada da aplicação e redistribui com base nesses dados
+#### Network
+- Não se preocupa com os dados, mas sim de onde vem essa requisição
+#### Classic
+- Junção do network e application
+
+### Auto Scaling
+Serviço que monitora e aumenta recursos automaticamente conforme a demanda aumenta, para isso temos que definir:
+- Grupos, a qual grupo pertence o scaling
+- Template, qual tipo de instância irá subir 
+- Options, definição quantas máquinas irá subir, o máximo e mínimo, etc. Exemplo quero que suba 20 máquinas novas quando tiver X tráfego
+
+#### Estratégias de auto scaling
+- All times
+  - definimos o número mínimo de instâncias e máximo, ele sempre vai manter no mínimo o minimo definido e se a carga aumentar irá subir máquinas até chegar no máximo
+- Scale manual
+  - Pouco usado, o usuário informa manualmente quantas máquinas quer subir ou derrubar
+- Schedule
+  - Agendamos datas e horários específicos para subir ou derrubar máquinas, ex: se meu serviços só tem tráfego no final de semana, durante a semana eu quero 3 máquinas e no final de semana eu quero 10
+- Demand
+  - Defino um número máximo de máquinas e seto regras para subir novas, por exemplo, sempre que der 50% de uso de um máquina, quero que suba uma nova
+- Preditivo
+  - Se baseaia em métricas de outros serviços e escala conforme os outros tem um uso maior
 <hr> 
 <div id="s3"></div> 
 

@@ -152,18 +152,69 @@ Serviço que monitora e aumenta recursos automaticamente conforme a demanda aume
 <div id="s3"></div> 
 
 ## Storage S3
+O Amazon S3 é um armazenamento de objetos criado para armazenar e recuperar qualquer quantidade de dados de qualquer local na Internet. Ele é um serviço de armazenamento simples que oferece uma infraestrutura de armazenamento de dados com escalabilidade infinita a um custo bastante reduzido.
+
+Características:
+- Object-Based Storage, onde armazenamos arquivos
+- **Não é um Block-Based Storage**, por tanto **não podemos instalar nenhum SO nele**
+- Tamanho de um arquivo pode variar **entre 0 e 5TB**
+- Bucket (como se fosse uma "pasta" de arquivos)
+- Cada bucket tem que ter um nome único global
+- Podemos fazer upload, download e visualização de um arquivo
+- Tamanho ilimitado de storage
+
+### Tipos de armazenamento S3
+O Amazon S3 oferece uma ampla variedade de classes de armazenamento para diferentes casos de uso. 
+- S3 Standard, para armazenamento geral de dados acessados com frequência
+- S3 Intelligent-Tiering, para dados com padrões de acesso desconhecido ou dinâmico
+- S3 Standard-Infrequent Access (S3 Standard – IA) 
+- S3 One Zone-Infrequent Access (S3 One Zone – IA) para dados de longa vida, mas acessados com menos frequência 
+- S3 Glacier (S3 Glacier) e Amazon S3 Glacier Deep Archive (S3 Glacier Deep Archive) para preservação digital e arquivamento de dados de longo prazo. 
+
+### S3 Preço
+Pagamos pelo armazenamento e também pela taxa de transferência (seja download ou upload), os valores podem variar de região para região, devido aos impostos dos locais
 
 <hr> 
 <div id="iam"></div> 
 
-## IAM
+## IAM ( Identity Access Management)
+Gerenciador de acesso da AWS, onde podemos criar usuário, grupos e etc dentro da conta AWS. Podemos setar roles, regras e permissões/políticas para acessar um determinado recursos
+- Não é boa prática utilizar conta root da AWS.
 
 <hr> 
 <div id="pricing"></div> 
 
 ## Cobrança e preços
+A AWS tem uma filosofia quanto ao pagamento, `cliente sempre está em primeiro lugar, proteja seu cliente e você estará protegendo sua empresa`.
+Todos os serviços são pagos por segundos
+- Pago conforme uso, conta no início do mês é 0, e conforme vai usando o valor incrementa, até final do mês quando é pago
+- Pago de acordo com o uso
+- Pague menos por quanto mais você utilize, conforme seu uso for maior, os preços começam a diminuir
+- Pague muito menos quando você reserva, serviços que são do tipo reserved, quando você reserva aquele serviço, ficará mais barato do que on demand
 
+#### CAPEX Vs OPEX
+- CAPEX (Capital Expenditure) - Você paga antes de utilizar, valor fixo e mais caro
+- OPEX (Operation Expenditure) - Paga de acordo com o que você utiliza
+
+### Budget Vs Cost Explorer
+- Budget - Orçamento que colocamos na AWS
+  - Possível criar alertas em cima desse orçamento
+  - Antes de atingir
+- Cost Explorer - Relatório do que foi gasto
+  - Mostrará com o que foi gasto
 <hr> 
+
+#### Planos da AWS para suporte
+Temos 4 tipos de planos para suporte da AWS
+- Básico (free)
+  - Incluido em todas as contas, suporte é selfm então você tem que buscar as coisa dentro da base de suporte, temos também checagem de status da conta
+- Developer ($29 / mês)
+  - tudo o que tem no básico, e tem email direto para o suporte, com limite de 1 email de suporte por hora, com SLA de resposta de até 12h
+- Business ($100 / mês)
+  - Tudo que tem no developer, mas com limites maiores de suporte e tempo de resposta menor
+- Enterprise (a partir de $15000 / mÊ)
+  - Tudo o que tem no busines, mas com limites maiores e suporte com tempo de resposta menor
+  - Gerente de tecnologia para ajudar em seus problemas
 <div id="security"></div> 
 
 ## Segurança

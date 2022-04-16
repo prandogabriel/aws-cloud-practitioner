@@ -10,6 +10,7 @@ Compilado de todas as anotações que fiz durante o estudo para tirar a certific
     - [Storage S3](#s3)
     - [IAM](#iam)
     - [Cobrança e preços](#pricing)
+    - [AWS Organizations](#organizations)
     - [Segurança](#security)
 * [Referências](#links)
 
@@ -215,10 +216,46 @@ Temos 4 tipos de planos para suporte da AWS
 - Enterprise (a partir de $15000 / mÊ)
   - Tudo o que tem no busines, mas com limites maiores e suporte com tempo de resposta menor
   - Gerente de tecnologia para ajudar em seus problemas
+
+<div id="organizations"></div> 
+
+## AWS Organizations
+Uma forma de segmentar dentro da AWS, ajuda você a gerenciar e controlar seu ambiente de maneira centralizada à medida que os negócios e seus recursos da AWS expandem. Usando você pode criar novas contas da AWS e alocar recursos, agrupar contas para organizar seus fluxos de trabalho, aplicar políticas a contas ou grupos para governança e simplificar o faturamento usando um único método de pagamento para todas as suas contas.
+Além disso, o AWS Organizations é integrado a outros serviços da AWS para que você possa definir configurações centrais, mecanismos de segurança, requisitos de auditoria e compartilhamento de recursos entre contas na sua organização. O AWS Organizations está disponível para todos os clientes da AWS sem custos adicionais.
+<hr> 
 <div id="security"></div> 
 
 ## Segurança
+A AWS tem diversos selos de compliance, o que nos da uma segurança maior e uma certeza de que a plataforma é segura e nossos dados estão seguros também.
 
+#### O QUE É O AWS ARTIFACT?
+
+O AWS Artifact, disponível no console, é um portal de autoatendimento para recuperação de artefatos de auditoria que oferece aos clientes acesso sob demanda à documentação de conformidade e aos acordos da AWS.
+
+Você pode usar os relatórios do AWS Artifact para fazer download de documentos de segurança e conformidade, como os relatórios de certificações ISO, Payment Card Industry (PCI – Setor de cartões de pagamento) e Organization Control (SOC – Controles de sistema e organização).
+
+Você pode usar o AWS Artifact Agreements para examinar, aceitar e acompanhar o status de acordos da AWS como o Business Associate Addendum (BAA – Adendo de associado comercial).
+
+#### Responsability Model
+A AWS garante segurança e resiliência em sua infraestrutura e softwares, mas para as aplicações e serviços que seus clientes desenvolvem, não é responsabilidade da AWS prover segurança, poor exemplo uma máquina EC2, a AWS garante consistência e disponibidade da máquina, backup e etc, mas o cliente tem liberdade de abrir portas de acesso público para a máquina, então cabe ao cliente fazer uma configuração correta tbm
+
+
+### AWS WAF (Web Application Firewall)
+O AWS WAF é um firewall de aplicações Web que ajuda a proteger suas aplicações Web ou APIs contra bots e exploits comuns na Web que podem afetar a disponibilidade, comprometer a segurança ou consumir recursos em excesso. O AWS WAF oferece controle sobre como o tráfego atinge suas aplicações, permitindo que você crie regras de segurança que controlam o tráfego de bots e bloqueiam padrões de ataque comuns, como injeção de SQL ou cross-site scripting
+### AWS Shield
+O AWS Shield é um serviço gerenciado de proteção contra DDoS (Negação de serviço distribuída) que protege os aplicativos executados na AWS. O AWS Shield oferece de detecção e mitigações em linha automáticas e sempre ativas que minimizam o tempo de inatividade e a latência dos aplicativos, fornecendo proteção contra DDoS sem necessidade de envolver o AWS Support. O AWS Shield tem dois níveis, Standard e Advanced.
+
+### Inspector
+Caso você não fica de olho nas atualizações e patches de segurança do que você está utilizando, você pode usar o inspector para varer suas máquinas para ver possíveis falhas
+
+### Trosted Advisor
+Ajuda a identificar sua estrtura da AWS, e sugerir melhorias em sua estrutura
+### Cloud Trail
+Monitorar tudo o que passa por chamadas de APIs, pode ver quem alterou algo na estrutura como e qual hora
+###  Athena
+O Athena é um serviço de consultas interativas que facilita a análise de dados no Amazon S3 usando SQL padrão. O Athena não precisa de servidor. Portanto, não há infraestrutura para gerenciar e você paga apenas pelas consultas executadas.
+### Macie
+O Macie é um serviço de segurança e privacidade de dados totalmente gerenciado que usa machine learning e correspondência de padrões para descobrir e proteger seus dados confidenciais na AWS.
 <hr> 
 <div id="links"></div> 
 
